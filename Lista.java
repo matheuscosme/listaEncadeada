@@ -1,9 +1,11 @@
 public class Lista {
     private No inicioLista;
 
+
     public Lista(){
         this.inicioLista = null;
     }
+
 
     public boolean listaVazia(){
         if (this.inicioLista == null){
@@ -14,6 +16,7 @@ public class Lista {
         }
     }
 
+
     public void adicionarInicio(int valor){
         No novo = new No(valor);
 
@@ -22,6 +25,7 @@ public class Lista {
         }
         this.inicioLista = novo;
     }
+
 
     public void adicionarFinal(int valor){
         No novo = new No(valor);
@@ -38,6 +42,7 @@ public class Lista {
         }
     }
 
+
     public No removerInicio() throws estruturaVaziaException{
         No removido = null;
 
@@ -51,6 +56,7 @@ public class Lista {
 
         return removido;
     }
+
 
     public No removerFinal() throws estruturaVaziaException{
         No removido = null;
@@ -93,6 +99,7 @@ public class Lista {
         }
     }
 
+
     public No removerNaPosicao(int posicao) throws estruturaVaziaException{
         No removido = null;
         No aux;
@@ -118,6 +125,7 @@ public class Lista {
         return removido;
     }
 
+    
 
     public void printarLista(){
         No noAtual;
