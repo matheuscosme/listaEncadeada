@@ -126,29 +126,30 @@ public class Lista {
     }
 
     
-        public No retornarUltimo(){
+    public No retornarUltimo() throws estruturaVaziaException{
         No ultimo = null;
         ultimo = this.removerFinal();
-        this.adicionarFinal(ultimo);
+        this.adicionarFinal(ultimo.elementoArmazenado);
 
         return ultimo;
     }
 
-    public No retornarPenultimo(){
+
+    public No retornarPenultimo() throws estruturaVaziaException{
         No ultimo, penultimo;
         ultimo = this.removerFinal();
         penultimo = this.removerFinal();
-        this.adicionarFinal(penultimo);
-        this.adicionarFinal(ultimo);
+        this.adicionarFinal(penultimo.elementoArmazenado);
+        this.adicionarFinal(ultimo.elementoArmazenado);
 
         return penultimo;
     }
 
 
-    public No retornarNaPosicao(int posicao){
+    public No retornarNaPosicao(int posicao) throws estruturaVaziaException{
         No elemento;
         elemento = this.removerNaPosicao(posicao);
-        this.adicionarNaPosicao(posicao);
+        this.adicionarNaPosicao(elemento.elementoArmazenado, posicao);
 
         return elemento;
     }
