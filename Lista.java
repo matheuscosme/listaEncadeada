@@ -126,6 +126,34 @@ public class Lista {
     }
 
     
+        public No retornarUltimo(){
+        No ultimo = null;
+        ultimo = this.removerFinal();
+        this.adicionarFinal(ultimo);
+
+        return ultimo;
+    }
+
+    public No retornarPenultimo(){
+        No ultimo, penultimo;
+        ultimo = this.removerFinal();
+        penultimo = this.removerFinal();
+        this.adicionarFinal(penultimo);
+        this.adicionarFinal(ultimo);
+
+        return penultimo;
+    }
+
+
+    public No retornarNaPosicao(int posicao){
+        No elemento;
+        elemento = this.removerNaPosicao(posicao);
+        this.adicionarNaPosicao(posicao);
+
+        return elemento;
+    }
+
+    
 
     public void printarLista(){
         No noAtual;
